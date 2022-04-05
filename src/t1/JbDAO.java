@@ -13,6 +13,7 @@ public class JbDAO {
 	ResultSet rs = null; // 실행 결과값
 	
 	String sql = "";
+
 	
 	JbVO vo = null;
 	public JbDAO() {
@@ -204,6 +205,8 @@ public class JbDAO {
 			sql = "delete from jborder";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.executeUpdate();
+			
+		
 		} catch (SQLException e) {
 			System.out.println("SQL 에러 : " + e.getMessage());
 		} finally {

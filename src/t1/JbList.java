@@ -48,10 +48,6 @@ public class JbList extends JFrame{
 		btnNewButton.setBounds(12, 483, 97, 48);
 		panel2.add(btnNewButton);
 		
-		JButton btnNewButton_1_1_1 = new JButton("내역삭제");
-		btnNewButton_1_1_1.setBounds(12, 78, 97, 48);
-		panel2.add(btnNewButton_1_1_1);
-		
 		JButton btnNewButton_1_1_2 = new JButton("전체삭제");
 		btnNewButton_1_1_2.setBounds(12, 20, 97, 48);
 		panel2.add(btnNewButton_1_1_2);

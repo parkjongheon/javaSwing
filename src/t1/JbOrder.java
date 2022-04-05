@@ -267,6 +267,16 @@ public class JbOrder extends JFrame{
 		btnMemberP.setBounds(432, 10, 97, 31);
 		pane3.add(btnMemberP);
 		
+		JRadioButton rdbtnClear = new JRadioButton("");
+		bills.add(rdbtnClear);
+		rdbtnClear.setBounds(33, 63, -11, 23);
+		pane3.add(rdbtnClear);
+		
+		JRadioButton rdbtnClear1 = new JRadioButton("");
+		take.add(rdbtnClear1);
+		rdbtnClear1.setBounds(378, 47, -11, 23);
+		pane3.add(rdbtnClear1);
+		
 		
 		setVisible(true);
 		//회원관리
@@ -428,9 +438,13 @@ public class JbOrder extends JFrame{
 						else if(rdbtnRide.isSelected()) { 
 							menutake = "배달주문";
 						}
+						rdbtnClear.setSelected(true);
+						rdbtnClear1.setSelected(true);
 						textArea.setText("");
 						textArea2.setText("");
+						txtName.setText("");
 						lblPrice.setText("0");
+						price = 0;
 						
 						
 						vo.setName(name);
@@ -449,8 +463,11 @@ public class JbOrder extends JFrame{
 		// 취소하기 버튼
 		btnClear.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				rdbtnClear.setSelected(true);
+				rdbtnClear1.setSelected(true);
 				textArea.setText("");
 				textArea2.setText("");
+				txtName.setText("");
 				lblPrice.setText("0");
 				price = 0;
 			}
